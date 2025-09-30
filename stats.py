@@ -6,8 +6,6 @@ def character_count(text):
     result = {}
     lower_case = text.lower()
     for letter in lower_case:
-        if letter not in result:
-            result[letter] = 1
-        else:
-            result[letter] += 1
+        count = result.get(letter, 0)
+        result[letter] = count +1
     return result
